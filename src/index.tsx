@@ -1,13 +1,11 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 
-import App from './App';
+import App from "./App";
 
-import './index.scss';
+import "./index.scss";
 
 ReactDOM.render(
-  <div>
-    <App world="world!" />
-  </div>,
-  document.getElementById('root') as HTMLElement
+  <App world="world!" />,
+  document.getElementById("root") as HTMLElement,
 );
