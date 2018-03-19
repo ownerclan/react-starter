@@ -10,7 +10,8 @@ module.exports = {
   module: {
     rules: [
       { test: /\.tsx?$/, loader: 'ts-loader' },
-      { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader' }
+      { test: /\.css$/, loaders: ['style-loader', 'css-loader'] },
+      { test: /\.scss$/, loaders: ['style-loader', 'css-loader', 'sass-loader'] }
     ],
   },
   plugins: [
