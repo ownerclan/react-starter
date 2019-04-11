@@ -6,6 +6,7 @@ module.exports = {
   context: path.resolve(__dirname, './src'),
   entry: './index.tsx',
   output: {
+    publicPath: '/',
     filename: '[name].[chunkhash].js',
   },
   resolve: {
@@ -23,6 +24,11 @@ module.exports = {
       },
       { test: /\.css$/, loaders: ['style-loader', 'css-loader'] },
     ],
+  },
+  devServer: {
+    historyApiFallback: {
+      disableDotRule: true,
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
